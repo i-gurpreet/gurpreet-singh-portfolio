@@ -740,11 +740,11 @@ export const PHONE_TABS: PhoneTabInfo[] = [
 /**
  * ============================================================================
  * 📄 RESUME / CV
- * Place the PDF at: public/resume/cv.pdf
+ * Place the PDF at: public/resume/GurpreetSinghCV.pdf
  * ============================================================================
  */
-export const RESUME_PATH = '/resume/cv.pdf';
-export const RESUME_FILENAME = 'Gurpreet-Singh-Resume.pdf';
+export const RESUME_PATH = '/resume/GurpreetSinghCV.pdf';
+export const RESUME_FILENAME = 'GurpreetSinghCV.pdf';
 
 /**
  * ============================================================================
