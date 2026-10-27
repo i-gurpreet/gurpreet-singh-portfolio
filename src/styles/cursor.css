@@ -1,0 +1,162 @@
+/* ==========================================================================
+   MAGNETIC GLOWING ORB CUSTOM CURSOR
+   ========================================================================== */
+
+/* Global Overlay */
+.custom-cursor-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99999;
+  transition: opacity 0.25s ease;
+}
+
+.custom-cursor-root.cursor-hidden {
+  opacity: 0;
+}
+
+.custom-cursor-root.cursor-visible {
+  opacity: 1;
+}
+
+/* Hide Default System Cursor when Custom Cursor is Enabled */
+body.has-custom-cursor,
+body.has-custom-cursor *,
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor input,
+body.has-custom-cursor textarea,
+body.has-custom-cursor select,
+body.has-custom-cursor [role="button"],
+body.has-custom-cursor [onclick] {
+  cursor: none !important;
+}
+
+@media (pointer: coarse), (hover: none) {
+  body.has-custom-cursor,
+  body.has-custom-cursor *,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor select,
+  body.has-custom-cursor [role="button"] {
+    cursor: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Magnetic Glowing Orb Elements
+   -------------------------------------------------------------------------- */
+
+/* Trailing soft radiant ambient halo */
+.cursor-orb-halo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  margin-left: -22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, rgba(59, 130, 246, 0.18) 50%, transparent 75%);
+  filter: blur(5px);
+  pointer-events: none;
+  will-change: transform;
+  transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              margin 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.25s ease;
+}
+
+/* Core dynamic stretching glowing bead */
+.cursor-orb-core {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #38bdf8 40%, #06b6d4 100%);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.85),
+              0 0 24px rgba(6, 182, 212, 0.55);
+  pointer-events: none;
+  will-change: transform;
+  transition: width 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              height 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              margin 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Hover State over Interactive Elements
+   -------------------------------------------------------------------------- */
+.custom-cursor-root.cursor-hovering .cursor-orb-halo {
+  width: 74px;
+  height: 74px;
+  margin-top: -37px;
+  margin-left: -37px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, rgba(139, 92, 246, 0.25) 55%, transparent 75%);
+  filter: blur(7px);
+}
+
+.custom-cursor-root.cursor-hovering .cursor-orb-core {
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+  margin-left: -11px;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.95),
+              0 0 36px rgba(6, 182, 212, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   Click Pulse State (Tactile Spring Compression)
+   -------------------------------------------------------------------------- */
+.custom-cursor-root.cursor-clicking .cursor-orb-core {
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  margin-left: -5px;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.9);
+}
+
+.custom-cursor-root.cursor-clicking .cursor-orb-halo {
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  margin-left: -14px;
+  filter: blur(3px);
+}
+
+/* --------------------------------------------------------------------------
+   Theme Specific Color Adjustments (Light Mode)
+   -------------------------------------------------------------------------- */
+[data-theme='light'] .cursor-orb-core {
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #0284c7 45%, #0369a1 100%);
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.8),
+              0 0 20px rgba(2, 132, 199, 0.45);
+}
+
+[data-theme='light'] .cursor-orb-halo {
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, rgba(59, 130, 246, 0.15) 50%, transparent 75%);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile & Reduced Motion Safety
+   -------------------------------------------------------------------------- */
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor-root {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor-root {
+    display: none !important;
+  }
+}

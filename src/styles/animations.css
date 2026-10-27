@@ -1,0 +1,228 @@
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Floating Ambient Orbs */
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 50px) scale(1.08);
+  }
+  100% {
+    transform: translate(-30px, 20px) scale(0.95);
+  }
+}
+
+@keyframes floatOrbReverse {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -40px) scale(1.1);
+  }
+  100% {
+    transform: translate(30px, -20px) scale(0.92);
+  }
+}
+
+/* Hero Visual & Chip Animations */
+@keyframes chipFloatTop {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+}
+
+@keyframes chipFloatBottom {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(-1deg);
+  }
+}
+
+@keyframes heroCardGlowPulse {
+  0%, 100% {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 35px var(--accent-glow);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes heroDeviceFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-0.5deg);
+    box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0.5deg);
+    box-shadow: 0 32px 70px -12px rgba(0, 0, 0, 0.5), 0 0 45px var(--accent-glow-purple);
+  }
+}
+
+@keyframes heroIconFloat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Gradient Shimmer for Headlines */
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #38bdf8 30%, #a855f7 70%, #ec4899 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShimmer 8s ease infinite;
+}
+
+/* Pulse Glow Animation */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.04);
+  }
+}
+
+.pulse-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-emerald);
+  box-shadow: 0 0 10px var(--brand-emerald);
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Interactive Card Hover Shimmer */
+@keyframes buttonShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-trigger {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-trigger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: translateX(-100%);
+}
+
+.shimmer-trigger:hover::after {
+  animation: buttonShimmer 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modal Pop In */
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-animate-in {
+  animation: modalPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Tab Card Enter Animation */
+@keyframes tabCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tab-content-enter {
+  animation: tabCardEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Backdrop Fade */
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.backdrop-animate-in {
+  animation: backdropFadeIn 0.25s ease-out forwards;
+}
+
+/* React Native Logo Spin */
+@keyframes spinReactLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.react-native-spin-logo {
+  animation: spinReactLogo 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
