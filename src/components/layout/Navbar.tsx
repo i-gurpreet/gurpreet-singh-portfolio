@@ -27,6 +27,7 @@ export const Navbar: React.FC = () => {
     { href: '#skills', labelKey: 'nav_skills' },
     { href: '#about', labelKey: 'nav_about' },
     { href: '#achievements', labelKey: 'nav_achievements' },
+    { href: '#resume', labelKey: 'nav_resume' },
     { href: '#contact', labelKey: 'nav_contact' },
   ];
 

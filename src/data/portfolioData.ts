@@ -527,6 +527,87 @@ export const PROJECTS: Project[] = [
       "Dual Store Publishing: Continuous maintenance, performance tuning, and updates across Apple App Store and Google Play.",
     ],
   },
+  {
+    id: "hear_whats_here",
+    name: "Hear What's Here",
+    category: "lifestyle",
+    platforms: ["iOS"],
+    techStack: [
+      "Swift",
+      "GeoFencing",
+      "MapKit",
+      "REST APIs",
+      "Core Location",
+    ],
+    featured: true,
+    role: "Native iOS (Swift) Developer",
+    iconName: "Compass",
+    gradient: "linear-gradient(135deg, #2563eb 0%, #0f172a 100%)",
+    logoUrl: "/apps/hearwhatshere.png",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/hear-whats-here/id6464310162",
+    previewHighlight: {
+      tag: "Landmark Discovery",
+      metric: "GeoFencing · Map Pins · API Data",
+      detail: "Swift Native • Core Location • MapKit",
+    },
+    keyPoints: [
+      "🧭 Native iOS app built fully in Swift",
+      "📡 GeoFencing triggers nearby landmark API fetches",
+      "🗺️ Landmarks shown on map with location pointers",
+      "📍 Explore & learn about sites around you",
+    ],
+    aboutProject:
+      "Developed Hear What's Here as a native iOS (Swift) landmark discovery app. GeoFencing detects when the user is near places of interest, fetches landmark data from APIs, and displays results on the map with location pointers so explorers can uncover remarkable sites around them. Published on the Apple App Store.",
+    keyFeatures: [
+      "Native Swift iOS: Built entirely in Swift for iOS — native performance and platform UX.",
+      "GeoFencing: Region monitoring triggers landmark data fetches when the user enters nearby zones.",
+      "API-Driven Content: Landmark details loaded from backend APIs based on geofence / location context.",
+      "Map Pointers: Landmarks rendered on the map with pins so users can see and navigate to each site.",
+      "Local Exploration: Helps travelers and locals discover history and stories of landmarks around them.",
+    ],
+  },
+  {
+    id: "zeus_weather",
+    name: "Zeus Weather – Targeting Made Easy",
+    category: "utility",
+    platforms: ["iOS", "Android"],
+    techStack: [
+      "React Native",
+      "REST APIs",
+      "Weather APIs",
+      "Maps",
+      "Push Notifications",
+    ],
+    featured: true,
+    role: "Senior React Native Developer",
+    iconName: "Activity",
+    gradient: "linear-gradient(135deg, #1d4ed8 0%, #dc2626 100%)",
+    logoUrl: "/apps/zeusweather.png",
+    appStoreUrl: "https://apps.apple.com/us/app/zeus-weather/id1638349760",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.zeus_weather",
+    previewHighlight: {
+      tag: "Storm Targeting",
+      metric: "Hail · Wind Gusts · Insurance Leads",
+      detail: "React Native • Weather APIs • Territory Targeting",
+    },
+    keyPoints: [
+      "⛈️ Automated storm monitoring for your territory",
+      "💨 Hail, wind gusts (from 35 MPH) & weather reports via API",
+      "🏢 Trusted by insurance companies for fresh targets",
+      "📊 Historical data + constantly updated algorithms",
+    ],
+    aboutProject:
+      "Developed Zeus Weather in React Native as a targeting digital assistant for insurance professionals. It constantly monitors specified territories for new storm activity — hail, wind gusts, and related weather events — fetching reports via weather APIs and delivering the freshest targets based on territory and demographic filters. Published on the Apple App Store and Google Play.",
+    keyFeatures: [
+      "Automated Monitoring: Continuously watches territories for new storm activity and delivers results that matter.",
+      "Weather API Integration: Fetches hail, wind gust (down to 35 MPH), and related storm reports from weather APIs.",
+      "Insurance Targeting: Uses territory + demographic data to surface high-value leads trusted by insurance companies.",
+      "Always Fresh Data: Constantly updated algorithms and historical data for reliable targeting decisions.",
+      "Cross-Platform React Native: Easy-to-use iOS and Android experience for field and office users.",
+    ],
+  },
 ];
 
 /**
@@ -658,6 +739,15 @@ export const PHONE_TABS: PhoneTabInfo[] = [
 
 /**
  * ============================================================================
+ * 📄 RESUME / CV
+ * Place the PDF at: public/resume/cv.pdf
+ * ============================================================================
+ */
+export const RESUME_PATH = '/resume/cv.pdf';
+export const RESUME_FILENAME = 'Gurpreet-Singh-Resume.pdf';
+
+/**
+ * ============================================================================
  * 🗄️ UNIFIED PORTFOLIO DATABASE OBJECT
  * ============================================================================
  */
@@ -673,6 +763,8 @@ export const portfolioDatabase = {
   education: EDUCATION,
   additionalInfo: ADDITIONAL_INFO,
   deviceTabs: PHONE_TABS,
+  resumePath: RESUME_PATH,
+  resumeFilename: RESUME_FILENAME,
 };
 
 export default portfolioDatabase;

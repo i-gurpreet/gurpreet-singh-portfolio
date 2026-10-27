@@ -3594,6 +3594,129 @@
 }
 
 /* ==========================================================================
+   RESUME SECTION (editorial card + PDF document mockup)
+   ========================================================================== */
+.resume-section {
+  padding-block: var(--space-3xl);
+}
+
+.resume-editorial-card {
+  margin-top: var(--space-xl);
+}
+
+.resume-doc-visual {
+  text-decoration: none;
+  color: inherit;
+}
+
+.resume-doc-shell {
+  width: min(280px, 78vw);
+  height: 400px;
+  border-radius: 18px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-normal);
+  z-index: 1;
+}
+
+.resume-doc-visual:hover .resume-doc-shell {
+  transform: scale(1.02);
+}
+
+.resume-doc-chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.resume-doc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-medium);
+}
+
+.resume-doc-dot:nth-child(1) { background: #f87171; }
+.resume-doc-dot:nth-child(2) { background: #fbbf24; }
+.resume-doc-dot:nth-child(3) { background: #34d399; }
+
+.resume-doc-chrome-label {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-family-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  max-width: 55%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resume-doc-viewport {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #ffffff;
+}
+
+.resume-doc-iframe {
+  border: 0;
+  pointer-events: none;
+  /* Zoom so first page fills the mockup like an app screenshot */
+  transform: scale(0.55);
+  transform-origin: top left;
+  width: 181.82%;
+  height: 181.82%;
+}
+
+.resume-doc-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: var(--space-lg);
+  background: linear-gradient(to top, rgba(3, 7, 18, 0.55) 0%, transparent 45%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.resume-doc-visual:hover .resume-doc-overlay {
+  opacity: 1;
+}
+
+.resume-doc-overlay-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 650;
+  box-shadow: var(--shadow-md);
+}
+
+.resume-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* ==========================================================================
    CONTACT QUICK ACTIONS & MINIMAL FOOTER
    ========================================================================== */
 .contact-quick-actions {

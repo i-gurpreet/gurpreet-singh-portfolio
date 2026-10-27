@@ -187,6 +187,8 @@ export const hi = {
   languages_title: 'भाषाएं',
 
   // Project Descriptions
+  project_hear_whats_here_desc: 'Native Swift iOS लैंडमार्क ऐप — GeoFencing से API डेटा fetch होकर मैप पर pointers के साथ दिखता है।',
+  project_zeus_weather_desc: 'React Native storm-targeting ऐप — क्षेत्र में hail/wind gusts weather APIs से मॉनिटर करके insurance leads देता है।',
   project_spf_desc: 'OpenAI का उपयोग करके व्यक्तिगत टैनिंग सुझाव, UV इंडेक्स विजेट और रेवेन्यूकैट/सुपरवॉल पेवॉल वाला AI स्किन ऐप।',
   project_routinely_desc: 'OpenAI द्वारा संचालित AI स्किनकेयर ऐप जो स्किन हेल्थ का विश्लेषण करता है और रूटीन तैयार करता है।',
   project_emergency_musician_desc: 'संगीतकारों, चर्चों और क्लाइंट्स को जोड़ने वाला मोबाइल प्लेटफॉर्म जिसमें स्क्वायर पेमेंट और एफसीएम शामिल हैं।',
@@ -233,6 +235,14 @@ export const hi = {
   cta_btn_touch: 'संपर्क करें',
   cta_btn_linkedin: 'लिंक्डइन',
   contact_badge: 'आइए जुड़ें',
+  // Resume
+  resume_badge: 'सीवी',
+  resume_title: 'बायोडाटा',
+  resume_subtitle: 'मेरा पूरा सीवी देखें या डाउनलोड करें — React Native, Native iOS (Swift), और प्रोडक्शन मोबाइल डिलीवरी।',
+  resume_preview_desc: '7+ वर्षों के React Native और Native iOS (Swift) अनुभव वाला पूरा बायोडाटा — प्रोडक्शन ऐप्स, पेमेंट्स, AI इंटीग्रेशन, और App Store / Play रिलीज़।',
+  resume_btn_view: 'बायोडाटा देखें',
+  resume_btn_download: 'PDF डाउनलोड करें',
+
   contact_title: 'आइए कुछ बेहतरीन बनाएं।',
   contact_subtitle: 'कोई प्रोजेक्ट, उत्पाद विचार या अवसर है? आइए बात करते हैं।',
 

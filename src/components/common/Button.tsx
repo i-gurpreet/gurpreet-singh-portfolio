@@ -7,6 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
   rel?: string;
+  download?: string | boolean;
   icon?: React.ReactNode;
   leftIcon?: React.ReactNode;
   children?: React.ReactNode;
@@ -19,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   target,
   rel,
+  download,
   icon,
   leftIcon,
   children,
@@ -34,6 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
         className={combinedClassName}
         target={target || (href.startsWith('http') ? '_blank' : undefined)}
         rel={rel || 'noopener noreferrer'}
+        download={download}
       >
         {leftIcon || icon}
         {children}

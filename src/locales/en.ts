@@ -187,6 +187,8 @@ export const en = {
   languages_title: 'Languages',
 
   // Project Descriptions
+  project_hear_whats_here_desc: 'Native Swift iOS landmark discovery app using GeoFencing to fetch nearby places from APIs and show them on the map with location pointers.',
+  project_zeus_weather_desc: 'React Native storm-targeting app for insurance — monitors territory for hail and wind gusts via weather APIs and delivers fresh leads automatically.',
   project_spf_desc: 'AI-powered skin health and tanning application using OpenAI to generate personalized tanning recommendations, UV Index widgets, and RevenueCat/Superwall paywalls.',
   project_routinely_desc: 'AI-powered skincare application that analyzes skin health, scans skincare products, and generates personalized skincare routines using OpenAI.',
   project_emergency_musician_desc: 'Mobile platform connecting musicians with churches, event organizers, and clients for seamless booking, gig management, and Square payments.',
@@ -233,6 +235,14 @@ export const en = {
   cta_btn_touch: 'Get In Touch',
   cta_btn_linkedin: 'LinkedIn',
   contact_badge: "Let's Connect",
+  // Resume
+  resume_badge: 'CV',
+  resume_title: 'Resume',
+  resume_subtitle: 'View or download my full CV — React Native, Native iOS (Swift), and production mobile delivery.',
+  resume_preview_desc: 'Full curriculum vitae covering 7+ years of React Native and Native iOS (Swift) delivery — production apps, payments, AI integrations, and App Store / Play releases.',
+  resume_btn_view: 'View Resume',
+  resume_btn_download: 'Download PDF',
+
   contact_title: "Let's build something great.",
   contact_subtitle: "Have a project, product idea, or opportunity? Let's talk.",
 

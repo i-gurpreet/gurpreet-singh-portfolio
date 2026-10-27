@@ -2,12 +2,13 @@ import React from 'react';
 import {
   Award,
   ArrowRight,
+  Download,
   Layers,
   MessageSquare,
   Smartphone,
 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { CONTACT_INFO } from '../../data/portfolioData';
+import { CONTACT_INFO, RESUME_FILENAME, RESUME_PATH } from '../../data/portfolioData';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { Button } from '../common/Button';
 import { ParticleNetwork } from '../common/ParticleNetwork';
@@ -93,6 +94,16 @@ export const HeroSection: React.FC = () => {
               </Button>
               <Button asLink href="#contact" variant="secondary" size="lg" icon={<MessageSquare size={18} />}>
                 {t('hero_btn_talk')}
+              </Button>
+              <Button
+                asLink
+                href={RESUME_PATH}
+                download={RESUME_FILENAME}
+                variant="outline"
+                size="lg"
+                leftIcon={<Download size={18} />}
+              >
+                {t('hero_btn_resume')}
               </Button>
             </div>
 

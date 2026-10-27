@@ -187,6 +187,8 @@ export const ja = {
   languages_title: '対応言語',
 
   // Project Descriptions
+  project_hear_whats_here_desc: 'Swiftネイティブのランドマーク発見アプリ。GeoFencingでAPIから周辺情報を取得し、地図のピンで表示。',
+  project_zeus_weather_desc: '保険向けReact Nativeのストーム監視アプリ。天候APIで雹・突風を取得し、テリトリーに合わせたターゲットを自動配信。',
   project_spf_desc: 'OpenAIによる個別日焼けアドバイス、UVインデックスウィジェット、RevenueCat/Superwallペイウォールを備えたAIスキンケアアプリ。',
   project_routinely_desc: '肌の健康状態を解析し化粧品成分をスキャンして最適なルーティンを生成するOpenAI搭載アプリ。',
   project_emergency_musician_desc: '音楽家と教会・イベント主催者をつなぐマッチングおよびSquare決済統合プラットフォーム。',
@@ -233,6 +235,14 @@ export const ja = {
   cta_btn_touch: 'お問い合わせ',
   cta_btn_linkedin: 'LinkedIn',
   contact_badge: 'お問い合わせ',
+  // Resume
+  resume_badge: '職務経歴書',
+  resume_title: '履歴書',
+  resume_subtitle: '職務経歴書の閲覧・ダウンロード — React Native、Native iOS（Swift）、プロダクションモバイル開発。',
+  resume_preview_desc: 'React Native と Native iOS（Swift）で 7 年以上の実績をまとめた職務経歴書 — 本番アプリ、決済、AI連携、App Store / Play 公開まで。',
+  resume_btn_view: '履歴書を見る',
+  resume_btn_download: 'PDFをダウンロード',
+
   contact_title: '素晴らしいプロダクトを共に。',
   contact_subtitle: 'プロジェクトや新しい機会についてお話ししましょう。',
 

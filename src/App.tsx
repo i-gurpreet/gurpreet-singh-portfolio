@@ -10,6 +10,7 @@ import { SkillsSection } from './components/sections/SkillsSection';
 import { AboutSection } from './components/sections/AboutSection';
 import { ExploringSection } from './components/sections/ExploringSection';
 import { AchievementsSection } from './components/sections/AchievementsSection';
+import { ResumeSection } from './components/sections/ResumeSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { CustomCursor } from './components/common/CustomCursor';
 import { PageLoader } from './components/common/PageLoader';
@@ -41,6 +42,7 @@ export const AppContent: React.FC = () => {
         <AboutSection />
         <ExploringSection />
         <AchievementsSection />
+        <ResumeSection />
         <ContactSection />
       </main>
 
