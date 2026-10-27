@@ -171,7 +171,11 @@ export const ProjectsSection: React.FC = () => {
                               src={project.logoUrl}
                               alt={`${project.name} app logo`}
                               className="phone-screen-logo"
-                              loading="lazy"
+                              width={64}
+                              height={64}
+                              decoding="async"
+                              loading={index === 0 ? 'eager' : 'lazy'}
+                              fetchPriority={index === 0 ? 'high' : 'auto'}
                             />
                           ) : (
                             <div className="phone-screen-icon">

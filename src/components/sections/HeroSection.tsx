@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="hero-section">
       {/* Interactive Floating Points Network (dev-story style: connects to nearest 8 points on cursor move) */}
-      <ParticleNetwork maxConnectedPoints={8} maxDistance={260} particleCount={450} />
+      <ParticleNetwork maxConnectedPoints={8} maxDistance={260} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="hero-grid reveal-on-scroll" ref={revealRef}>

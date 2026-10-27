@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Download, Eye, FileText, Layers } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import {
@@ -13,6 +13,26 @@ import { SectionHeading } from '../common/SectionHeading';
 export const ResumeSection: React.FC = () => {
   const { t } = useLanguage();
   const revealRef = useScrollReveal();
+  const previewRef = useRef<HTMLDivElement | null>(null);
+  const [loadPreview, setLoadPreview] = useState(false);
+
+  useEffect(() => {
+    const target = previewRef.current;
+    if (!target || loadPreview) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadPreview(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '240px 0px' }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [loadPreview]);
 
   return (
     <section id="resume" className="section resume-section">
@@ -26,7 +46,6 @@ export const ResumeSection: React.FC = () => {
 
           <div className="editorial-projects-container">
             <article className="editorial-project-card resume-editorial-card">
-              {/* Visual: document mockup with live PDF preview */}
               <a
                 className="editorial-device-visual resume-doc-visual"
                 href={RESUME_PATH}
@@ -45,14 +64,21 @@ export const ResumeSection: React.FC = () => {
                       {RESUME_FILENAME}
                     </span>
                   </div>
-                  <div className="resume-doc-viewport">
-                    <iframe
-                      src={`${RESUME_PATH}#toolbar=0&navpanes=0&scrollbar=0`}
-                      title={t('resume_title')}
-                      className="resume-doc-iframe"
-                      loading="lazy"
-                      tabIndex={-1}
-                    />
+                  <div className="resume-doc-viewport" ref={previewRef}>
+                    {loadPreview ? (
+                      <iframe
+                        src={`${RESUME_PATH}#toolbar=0&navpanes=0&scrollbar=0`}
+                        title={t('resume_title')}
+                        className="resume-doc-iframe"
+                        loading="lazy"
+                        tabIndex={-1}
+                      />
+                    ) : (
+                      <div className="resume-doc-placeholder" aria-hidden="true">
+                        <FileText size={36} />
+                        <span>{RESUME_FILENAME}</span>
+                      </div>
+                    )}
                     <div className="resume-doc-overlay" aria-hidden="true">
                       <span className="resume-doc-overlay-pill">
                         <Eye size={14} />
@@ -63,7 +89,6 @@ export const ResumeSection: React.FC = () => {
                 </div>
               </a>
 
-              {/* Info side */}
               <div className="editorial-project-info">
                 <div className="editorial-category-row">
                   <span className="editorial-cat-badge cat-utility">PDF</span>

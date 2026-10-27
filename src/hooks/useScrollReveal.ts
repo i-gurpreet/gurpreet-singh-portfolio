@@ -16,7 +16,8 @@ export const useScrollReveal = (threshold = 0.05) => {
       },
       {
         threshold,
-        rootMargin: '50px 0px 50px 0px',
+        // Start fade-in before the section fully enters — less blank mid-page feel
+        rootMargin: '200px 0px 200px 0px',
       }
     );
 
